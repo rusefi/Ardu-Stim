@@ -7,12 +7,13 @@
 
 void loadConfig()
 {
-  if(EEPROM.read(EEPROM_VERSION) == 255)
+  if(EEPROM.read(EEPROM_VERSION) == 255 || 1)
   //if(true)
   {
     //New arduino
-    selected_wheel = 5; //36-1
-    wanted_rpm = 3000;
+    selected_wheel = THIRTY_SIX_MINUS_ONE_WITH_SECOND_TRIGGER; //36-1
+//    selected_wheel = SIXTY_MINUS_TWO_WITH_CAM; //36-1
+    wanted_rpm = 200;
     mode = POT_RPM;
   }
   else
